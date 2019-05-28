@@ -14,6 +14,13 @@
 		93AF909F229818CE004592F0 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF909E229818CE004592F0 /* AlbumsViewController.swift */; };
 		93AF90A1229818DA004592F0 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */; };
 		93AF90A322981939004592F0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AF90A222981939004592F0 /* NetworkManager.swift */; };
+		93FBA81B2299A86400B8CB1B /* AlbumRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA81A2299A86400B8CB1B /* AlbumRequestResponse.swift */; };
+		93FBA81D2299AC6900B8CB1B /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA81C2299AC6900B8CB1B /* Album.swift */; };
+		93FBA81F2299AE3300B8CB1B /* AlbumsViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA81E2299AE3300B8CB1B /* AlbumsViewPresenter.swift */; };
+		93FBA8212299AE4400B8CB1B /* AlbumsViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA8202299AE4400B8CB1B /* AlbumsViewInteractor.swift */; };
+		93FBA823229AE6ED00B8CB1B /* AlbumsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */; };
+		93FBA825229AEAD100B8CB1B /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */; };
+		93FBA827229C303400B8CB1B /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA826229C303400B8CB1B /* Genre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		93AF909E229818CE004592F0 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		93AF90A222981939004592F0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		93FBA81A2299A86400B8CB1B /* AlbumRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRequestResponse.swift; sourceTree = "<group>"; };
+		93FBA81C2299AC6900B8CB1B /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		93FBA81E2299AE3300B8CB1B /* AlbumsViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewPresenter.swift; sourceTree = "<group>"; };
+		93FBA8202299AE4400B8CB1B /* AlbumsViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewInteractor.swift; sourceTree = "<group>"; };
+		93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewRouter.swift; sourceTree = "<group>"; };
+		93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		93FBA826229C303400B8CB1B /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +74,14 @@
 			children = (
 				93AF908A2298180E004592F0 /* AppDelegate.swift */,
 				93AF90A222981939004592F0 /* NetworkManager.swift */,
+				93FBA81A2299A86400B8CB1B /* AlbumRequestResponse.swift */,
+				93FBA81C2299AC6900B8CB1B /* Album.swift */,
+				93FBA826229C303400B8CB1B /* Genre.swift */,
 				93AF909E229818CE004592F0 /* AlbumsViewController.swift */,
+				93FBA81E2299AE3300B8CB1B /* AlbumsViewPresenter.swift */,
+				93FBA8202299AE4400B8CB1B /* AlbumsViewInteractor.swift */,
+				93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */,
+				93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */,
 				93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */,
 				93AF908E2298180E004592F0 /* Main.storyboard */,
 				93AF90912298180F004592F0 /* Assets.xcassets */,
@@ -102,6 +123,7 @@
 				TargetAttributes = {
 					93AF90862298180E004592F0 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -142,9 +164,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				93AF90A322981939004592F0 /* NetworkManager.swift in Sources */,
+				93FBA81B2299A86400B8CB1B /* AlbumRequestResponse.swift in Sources */,
+				93FBA823229AE6ED00B8CB1B /* AlbumsViewRouter.swift in Sources */,
+				93FBA827229C303400B8CB1B /* Genre.swift in Sources */,
+				93FBA81F2299AE3300B8CB1B /* AlbumsViewPresenter.swift in Sources */,
 				93AF908B2298180E004592F0 /* AppDelegate.swift in Sources */,
+				93FBA825229AEAD100B8CB1B /* AlbumTableViewCell.swift in Sources */,
 				93AF90A1229818DA004592F0 /* AlbumDetailViewController.swift in Sources */,
 				93AF909F229818CE004592F0 /* AlbumsViewController.swift in Sources */,
+				93FBA81D2299AC6900B8CB1B /* Album.swift in Sources */,
+				93FBA8212299AE4400B8CB1B /* AlbumsViewInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +327,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chinna.RSSFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -315,7 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chinna.RSSFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
