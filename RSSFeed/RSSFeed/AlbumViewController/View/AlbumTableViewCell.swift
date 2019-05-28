@@ -21,7 +21,6 @@ class AlbumTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -70,9 +69,9 @@ class AlbumTableViewCell: UITableViewCell {
         
         let viewsDict: [String: Any] = ["Album": albumName!, "Artist": artistName!, "AlbumImage": albumImageView!]
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[AlbumImage(100)]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[AlbumImage(50)]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[AlbumImage(100)]-10-[Album]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[AlbumImage(50)]-10-[Album]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
         
         addConstraint(NSLayoutConstraint.init(item: albumName!, attribute: .top, relatedBy: .equal, toItem: albumImageView, attribute: .top, multiplier: 1, constant: 0))
         

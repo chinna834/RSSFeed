@@ -21,6 +21,7 @@
 		93FBA823229AE6ED00B8CB1B /* AlbumsViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */; };
 		93FBA825229AEAD100B8CB1B /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */; };
 		93FBA827229C303400B8CB1B /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA826229C303400B8CB1B /* Genre.swift */; };
+		93FBA832229D6D8C00B8CB1B /* AlbumDetailViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FBA831229D6D8C00B8CB1B /* AlbumDetailViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewRouter.swift; sourceTree = "<group>"; };
 		93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		93FBA826229C303400B8CB1B /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		93FBA831229D6D8C00B8CB1B /* AlbumDetailViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumDetailViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */,
+				93FBA831229D6D8C00B8CB1B /* AlbumDetailViewController+Extensions.swift */,
 			);
 			path = AlbumDetailController;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				93AF909F229818CE004592F0 /* AlbumsViewController.swift in Sources */,
 				93FBA81D2299AC6900B8CB1B /* Album.swift in Sources */,
 				93FBA8212299AE4400B8CB1B /* AlbumsViewInteractor.swift in Sources */,
+				93FBA832229D6D8C00B8CB1B /* AlbumDetailViewController+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

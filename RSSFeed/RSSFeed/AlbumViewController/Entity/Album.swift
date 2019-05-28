@@ -11,14 +11,14 @@ import UIKit
 
 class Album {
     
-    let artistId: NSInteger?
+    let artistId: String?
     let artistName: String?
     let artistUrl: String?
     let artworkUrl100: String?
     let contentAdvisoryRating: String?
     let copyright: String?
     var genres: [Genre] = []
-    let id: NSInteger?
+    let id: String?
     let kind: String?
     let name: String?
     let releaseDate: String?
@@ -27,9 +27,7 @@ class Album {
     var artworkImage: UIImage?
     
     init(albumDictionary: [String: Any]) {
-        artistId = albumDictionary["artistId"] as? NSInteger
-        print(artistId)
-        
+        artistId = albumDictionary["artistId"] as? String
         artistName = albumDictionary["artistName"] as? String
         artistUrl = albumDictionary["artistUrl"] as? String
         artworkUrl100 = albumDictionary["artworkUrl100"] as? String
@@ -42,9 +40,7 @@ class Album {
             })
         }
         
-        id = albumDictionary["id"] as? NSInteger
-        print(id)
-        
+        id = albumDictionary["id"] as? String        
         kind = albumDictionary["kind"] as? String
         name = albumDictionary["name"] as? String
         releaseDate = albumDictionary["releaseDate"] as? String

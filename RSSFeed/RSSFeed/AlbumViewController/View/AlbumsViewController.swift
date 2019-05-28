@@ -32,7 +32,7 @@ class AlbumsViewController: UIViewController {
         tableView = UITableView.init(frame: CGRect.zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "Album")
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 70
         tableView.clipsToBounds = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -97,7 +97,7 @@ extension AlbumsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

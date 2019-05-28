@@ -15,9 +15,6 @@ struct Genre {
     
     init(genreDictionary: [String: Any]) {
         genreId = genreDictionary["genreId"] as? String
-        
-        print(genreId)
-        
         name = genreDictionary["name"] as? String
         url = genreDictionary["url"] as? String
     }

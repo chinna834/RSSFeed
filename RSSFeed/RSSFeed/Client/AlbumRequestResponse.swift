@@ -33,7 +33,6 @@ struct AlbumResponseObject: ResponseObject {
         
         if success {
             let responseDictionary = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            print(responseDictionary ?? [:])
             guard let albumsResponseDictionary = responseDictionary as? [String: Any] else { return response }
             response.responseDictionary = albumsResponseDictionary
         }
