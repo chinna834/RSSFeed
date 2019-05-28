@@ -9,6 +9,8 @@
 import UIKit
 
 class AlbumDetailViewController: UIViewController {
+    
+    var selectedAlbum: Album!
 
     override func viewDidLoad() {
         super.viewDidLoad()

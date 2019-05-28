@@ -72,18 +72,12 @@ class AlbumTableViewCell: UITableViewCell {
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[AlbumImage(100)]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
         
-        addConstraint(NSLayoutConstraint.init(item: albumImageView!, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100))
-        
-//        addConstraint(NSLayoutConstraint.init(item: albumImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[AlbumImage(100)]-10-[Album]-10-|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
         
         addConstraint(NSLayoutConstraint.init(item: albumName!, attribute: .top, relatedBy: .equal, toItem: albumImageView, attribute: .top, multiplier: 1, constant: 0))
         
-        addConstraint(NSLayoutConstraint.init(item: albumName!, attribute: .leading, relatedBy: .equal, toItem: albumImageView, attribute: .leading, multiplier: 1, constant: 10))
-
-        addConstraint(NSLayoutConstraint.init(item: artistName!, attribute: .bottom, relatedBy: .equal, toItem: albumImageView, attribute: .bottom, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint.init(item: artistName!, attribute: .top, relatedBy: .equal, toItem: albumName, attribute: .bottom, multiplier: 1, constant: 0))
         
-        addConstraint(NSLayoutConstraint.init(item: artistName!, attribute: .leading, relatedBy: .equal, toItem: artistName, attribute: .leading, multiplier: 1, constant: 0))
+        addConstraint(NSLayoutConstraint.init(item: artistName!, attribute: .leading, relatedBy: .equal, toItem: albumName, attribute: .leading, multiplier: 1, constant: 0))
     }
-    
-   
 }

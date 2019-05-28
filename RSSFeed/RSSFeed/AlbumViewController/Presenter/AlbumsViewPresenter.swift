@@ -22,16 +22,17 @@ class AlbumsViewPresenter {
     }
     
     func fetchAlbums(count: Int) {
-        let request = AlbumRequestObject.init(albumURL: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/2/explicit.json")
-        NetworkManager().send(r: request) { (success, response, error) in
+        interactor.fetchAlbums(count: count) { [weak self] (success, albums, error) in
             if success {
-                
+                guard let albumsInfo = albums else {
+                    self?.delegate?.albumsFetched(albums: [])
+                    return
+                }
+                self?.delegate?.albumsFetched(albums: albumsInfo)
             }
             else {
-                
+                self?.delegate?.albumsFetched(albums: [])
             }
         }
     }
-    
-    
 }

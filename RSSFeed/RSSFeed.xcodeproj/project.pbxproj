@@ -73,22 +73,86 @@
 			isa = PBXGroup;
 			children = (
 				93AF908A2298180E004592F0 /* AppDelegate.swift */,
-				93AF90A222981939004592F0 /* NetworkManager.swift */,
-				93FBA81A2299A86400B8CB1B /* AlbumRequestResponse.swift */,
-				93FBA81C2299AC6900B8CB1B /* Album.swift */,
-				93FBA826229C303400B8CB1B /* Genre.swift */,
-				93AF909E229818CE004592F0 /* AlbumsViewController.swift */,
-				93FBA81E2299AE3300B8CB1B /* AlbumsViewPresenter.swift */,
-				93FBA8202299AE4400B8CB1B /* AlbumsViewInteractor.swift */,
-				93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */,
-				93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */,
-				93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */,
+				93FBA829229D6AA000B8CB1B /* Client */,
+				93FBA82F229D6AF900B8CB1B /* AlbumViewController */,
+				93FBA830229D6B0800B8CB1B /* AlbumDetailController */,
 				93AF908E2298180E004592F0 /* Main.storyboard */,
 				93AF90912298180F004592F0 /* Assets.xcassets */,
 				93AF90932298180F004592F0 /* LaunchScreen.storyboard */,
 				93AF90962298180F004592F0 /* Info.plist */,
 			);
 			path = RSSFeed;
+			sourceTree = "<group>";
+		};
+		93FBA829229D6AA000B8CB1B /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				93AF90A222981939004592F0 /* NetworkManager.swift */,
+				93FBA81A2299A86400B8CB1B /* AlbumRequestResponse.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		93FBA82A229D6AAE00B8CB1B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				93FBA81C2299AC6900B8CB1B /* Album.swift */,
+				93FBA826229C303400B8CB1B /* Genre.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		93FBA82B229D6AC200B8CB1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93AF909E229818CE004592F0 /* AlbumsViewController.swift */,
+				93FBA824229AEAD100B8CB1B /* AlbumTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93FBA82C229D6ACB00B8CB1B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				93FBA81E2299AE3300B8CB1B /* AlbumsViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		93FBA82D229D6AD400B8CB1B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				93FBA8202299AE4400B8CB1B /* AlbumsViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		93FBA82E229D6ADE00B8CB1B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				93FBA822229AE6ED00B8CB1B /* AlbumsViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		93FBA82F229D6AF900B8CB1B /* AlbumViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93FBA82A229D6AAE00B8CB1B /* Entity */,
+				93FBA82B229D6AC200B8CB1B /* View */,
+				93FBA82C229D6ACB00B8CB1B /* Presenter */,
+				93FBA82D229D6AD400B8CB1B /* Interactor */,
+				93FBA82E229D6ADE00B8CB1B /* Router */,
+			);
+			path = AlbumViewController;
+			sourceTree = "<group>";
+		};
+		93FBA830229D6B0800B8CB1B /* AlbumDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				93AF90A0229818DA004592F0 /* AlbumDetailViewController.swift */,
+			);
+			path = AlbumDetailController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

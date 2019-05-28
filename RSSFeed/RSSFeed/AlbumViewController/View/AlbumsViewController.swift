@@ -10,7 +10,7 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
     
-    var tableView: UITableView?
+    var tableView: UITableView!
     var albums: [Album] = []
     
     var presenter: AlbumsViewPresenter?
@@ -30,8 +30,22 @@ class AlbumsViewController: UIViewController {
     
     func configureTableView() {
         tableView = UITableView.init(frame: CGRect.zero)
-        tableView?.translatesAutoresizingMaskIntoConstraints = false
-        tableView?.register(AlbumTableViewCell.self, forCellReuseIdentifier: "Album")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: "Album")
+        tableView.estimatedRowHeight = 120
+        tableView.clipsToBounds = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        view.addSubview(tableView)
+    }
+    
+    func createConstraints() {
+        let viewsDict: [String: Any] = ["Albums": tableView!]
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[Albums]|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
+        
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[Albums]|", options: .init(rawValue: 0), metrics: nil, views: viewsDict))
     }
     
     func reloadData() {
@@ -43,12 +57,21 @@ class AlbumsViewController: UIViewController {
         presenter?.fetchAlbums(count: 100)
     }
     
+    override func loadView() {
+        super.loadView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = "Albums"
+        
         configurePresenter()
+        
+        //Configure Table View
+        configureTableView()
+        createConstraints()
         
         //Load RSS Feed
         loadAlbums()
@@ -73,10 +96,18 @@ extension AlbumsViewController: UITableViewDataSource {
         return albums.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Album") as! AlbumTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Album") as? AlbumTableViewCell else {
+            return UITableViewCell()
+        }
         cell.createViews()
         cell.createConstraints()
+        
+        cell.accessoryType = .disclosureIndicator
         
         let album = albums[indexPath.row]
         cell.configureCell(album: album)
@@ -87,5 +118,8 @@ extension AlbumsViewController: UITableViewDataSource {
 extension AlbumsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Navigate to detail View Controller
+        
+        let selectedAlbum = albums[indexPath.row]
+        router?.navigateToAlbumDetailViewController(selectedAlbum: selectedAlbum)
     }
 }
